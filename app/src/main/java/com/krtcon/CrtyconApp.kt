@@ -1,4 +1,4 @@
-package com.krtcon
+package com.crtycon
 
 import android.app.Application
 import androidx.room.Room

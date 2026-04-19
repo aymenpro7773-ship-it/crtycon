@@ -1,4 +1,4 @@
-package com.krtcon
+package com.crtycon
 
 import android.app.NotificationChannel
 import android.app.NotificationManager

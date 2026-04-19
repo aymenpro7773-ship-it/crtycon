@@ -1,4 +1,4 @@
-package com.krtcon
+package com.crtycon
 
 import android.Manifest
 import android.content.Intent

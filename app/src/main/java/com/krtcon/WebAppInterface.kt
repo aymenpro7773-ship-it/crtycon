@@ -1,4 +1,4 @@
-package com.krtcon
+package com.crtycon
 
 import android.webkit.JavascriptInterface
 import org.json.JSONArray

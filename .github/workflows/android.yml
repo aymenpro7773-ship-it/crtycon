@@ -1,4 +1,4 @@
-name: Anti-Failure Build
+name: Final Recovery Build
 on: [push]
 jobs:
   build:
@@ -11,11 +11,19 @@ jobs:
         with:
           java-version: '17'
           distribution: 'temurin'
-      - name: Build
+      
+      - name: Build APK
         run: |
-          chmod +x gradlew
-          ./gradlew assembleDebug
+          # محاولة إيجاد ملف gradlew في أي مكان وتشغيله
+          GRADLEW_PATH=$(find . -name gradlew | head -n 1)
+          if [ -z "$GRADLEW_PATH" ]; then
+            echo "Error: gradlew not found!"
+            exit 1
+          fi
+          chmod +x $GRADLEW_PATH
+          $GRADLEW_PATH assembleDebug
+      
       - uses: actions/upload-artifact@v4
         with:
-          name: KrtconApp
-          path: app/build/outputs/apk/debug/*.apk
+          name: Krtcon-Final
+          path: "**/build/outputs/apk/debug/*.apk"

@@ -1,4 +1,4 @@
-package com.krtcon
+package com.crtycon
 import androidx.room.*
 
 @Dao

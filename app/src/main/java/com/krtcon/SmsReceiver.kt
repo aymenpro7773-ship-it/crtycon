@@ -1,4 +1,4 @@
-package com.krtcon
+package com.crtycon
 
 import android.content.BroadcastReceiver
 import android.content.Context
